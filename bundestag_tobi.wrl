@@ -1,14 +1,15 @@
 #VRML V2.0 utf8
 	
 Viewpoint {
-    position -10 10 30
+    position 0 200 200
+    orientation -1 0 0 0.5
 }
 Transform {
-    translation -18 0 -40
+    translation 0 0 0
     children [
         Shape{
             geometry Box{
-                size 100 0.01 100
+                size 1000 0.1 1000
             }
         }
     ]
@@ -21,14 +22,14 @@ Transform {
             geometry IndexedFaceSet{
                 coord Coordinate {
                     point[
-                        0 0 -2,
-                        35 0 -2,
-                        35 32 -2,
-                        0 32 -1,
-                        0 0 -40,
-                        35 0 -40,
-                        35 32 -40,
-                        0 32 -40
+                        51 0 -2,
+                        86 0 -2,
+                        86 32 -2,
+                        51 32 -1,
+                        51 0 -40,
+                        86 0 -40,
+                        86 32 -40,
+                        51 32 -40
                     ]
                 }
                 coordIndex [
@@ -56,12 +57,12 @@ Transform {
             geometry IndexedFaceSet{
                 coord Coordinate {
                     point[
-                        0 22 0,
-                        35 22 0,
-                        19.5 32 0
-                        0 22 -2,
-                        35 22 -2,
-                        19.5 32 -2
+                        51 22 0,
+                        86 22 0,
+                        70.5 32 0
+                        51 22 -2,
+                        86 22 -2,
+                        70.5 32 -2
                     ]
                 }
                 coordIndex [
@@ -86,7 +87,7 @@ Transform {
         }
         #pillar
         Transform{
-            translation 2.5 11 -0.5
+            translation 53.5 11 -0.5
             children[
                 DEF saeule Shape{
                     appearance Appearance{
@@ -105,31 +106,31 @@ Transform {
             ]
         }
         Transform{
-            translation 8.5 11 -0.5
+            translation 59.5 11 -0.5
             children[
                 USE saeule 
             ]
         }
         Transform{
-            translation 14.5 11 -0.5
+            translation 65.5 11 -0.5
             children[
                 USE saeule 
             ]
         }
         Transform{
-            translation 20.5 11 -0.5
+            translation 71.5 11 -0.5
             children[
                 USE saeule 
             ]
         }
         Transform{
-            translation 26.5 11 -0.5
+            translation 77.5 11 -0.5
             children[
                 USE saeule 
             ]
         }
         Transform{
-            translation 32.5 11 -0.5
+            translation 83.5 11 -0.5
             children[
                 USE saeule 
             ]
