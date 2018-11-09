@@ -1,0 +1,138 @@
+#VRML V2.0 utf8
+	
+Viewpoint {
+    position -10 10 30
+}
+Transform {
+    translation -18 0 -40
+    children [
+        Shape{
+            geometry Box{
+                size 100 0.01 100
+            }
+        }
+    ]
+}
+Transform {
+    translation -18 0 -40
+    children [
+        #front entry
+        Shape{
+            geometry IndexedFaceSet{
+                coord Coordinate {
+                    point[
+                        0 0 -2,
+                        35 0 -2,
+                        35 32 -2,
+                        0 32 -1,
+                        0 0 -40,
+                        35 0 -40,
+                        35 32 -40,
+                        0 32 -40
+                    ]
+                }
+                coordIndex [
+                    0 1 2 3 -1, #Front
+                    3 2 6 7 -1, #roof
+                    1 5 6 2 -1, #right
+                    0 3 7 4 -1, #left
+                ]
+                color Color {
+                    color [
+                        .5 .5 .5,
+                        0 0 1,
+                        0 1 0,
+                        0 1 1,
+                        1 0 0,
+                        1 0 1,
+                        1 1 0,
+                        1 1 1
+                    ]
+                }
+            }
+        }
+        #canopy
+        Shape{
+            geometry IndexedFaceSet{
+                coord Coordinate {
+                    point[
+                        0 22 0,
+                        35 22 0,
+                        19.5 32 0
+                        0 22 -2,
+                        35 22 -2,
+                        19.5 32 -2
+                    ]
+                }
+                coordIndex [
+                    0 1 2 -1,   #front2
+                    0 2 5 3 -1, #roof left
+                    1 4 5 2 -1, #roof right
+                    0 3 4 1 -1	#bottom
+                ]
+                color Color {
+                    color [
+                        1 0 0,
+                        1 0 1,
+                        1 1 0,
+                        1 1 1
+                        0 0 0,
+                        0 0 1,
+                        0 1 0,
+                        0 1 1,
+                    ]
+                }
+            }
+        }
+        #pillar
+        Transform{
+            translation 2.5 11 -0.5
+            children[
+                DEF saeule Shape{
+                    appearance Appearance{
+                        material Material { 
+                            diffuseColor 0.96 0.9 0.0
+                        }
+                    }
+                    geometry Cylinder {
+                        height 22
+                        radius 0.5
+                        side TRUE
+                        top FALSE
+                        bottom FALSE
+                    }
+                }
+            ]
+        }
+        Transform{
+            translation 8.5 11 -0.5
+            children[
+                USE saeule 
+            ]
+        }
+        Transform{
+            translation 14.5 11 -0.5
+            children[
+                USE saeule 
+            ]
+        }
+        Transform{
+            translation 20.5 11 -0.5
+            children[
+                USE saeule 
+            ]
+        }
+        Transform{
+            translation 26.5 11 -0.5
+            children[
+                USE saeule 
+            ]
+        }
+        Transform{
+            translation 32.5 11 -0.5
+            children[
+                USE saeule 
+            ]
+        }
+    ]
+}
