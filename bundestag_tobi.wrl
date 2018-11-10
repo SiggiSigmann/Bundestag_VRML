@@ -17,16 +17,17 @@ Transform {
 Transform {
     children [
         #tower 0 0
-        Transform{
+        DEF Tower Transform{
+            translation 0 0 -2
             children[
                 Shape{
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
-                                0 0 -2,
-                                20 0 -2,
-                                20 32 -2,
-                                0 32 -2,
+                                0 0 0,
+                                20 0 0,
+                                20 32 0,
+                                0 32 0,
                                 0 32 -20,
                                 20 32 -20,
                                 20 0 -20,
@@ -57,10 +58,10 @@ Transform {
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
-                                0 32 -2,
-                                20 32 -2,
-                                20 38 -2,
-                                0 38 -2,
+                                0 32 0,
+                                20 32 0,
+                                20 38 0,
+                                0 38 0,
                                 0 38 -20,
                                 20 38 -20,
                                 20 32 -20,
@@ -92,94 +93,28 @@ Transform {
         }
         #tower 1 0
         Transform{
+            translation 117 0 0
             children[
-                Shape{
-                    geometry IndexedFaceSet{
-                        coord Coordinate {
-                            point[
-                                117 0 -2,
-                                137 0 -2,
-                                137 32 -2,
-                                117 32 -2,
-                                117 32 -20,
-                                137 32 -20,
-                                137 0 -20,
-                                117 0 -20
-                            ]
-                        }
-                        coordIndex [
-                            0 1 2 3 -1, #front
-                            1 6 5 2 -1, #right
-                            0 3 4 7 -1, #left
-                            4 5 6 7 -1, #back
-                        ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
-                            ]
-                        }
-                    }
-                }
-                Shape{
-                    geometry IndexedFaceSet{
-                        coord Coordinate {
-                            point[
-                                117 32 -2,
-                                137 32 -2,
-                                137 38 -2,
-                                117 38 -2,
-                                117 38 -20,
-                                137 38 -20,
-                                137 32 -20,
-                                117 32 -20
-                            ]
-                        }
-                        coordIndex [
-                            0 1 2 3 -1, #front
-                            1 6 5 2 -1, #right
-                            0 3 4 7 -1, #left
-                            4 5 6 7 -1,#back
-                            2 5 4 3 #top
-                        ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
-                            ]
-                        }
-                    }
-                }
+               USE Tower
             ]
         }
-        #conections to front entry right
-        Transform{
+        #conections to front left right
+        DEF Connnection Transform{
+            translation 20 0 0
             children[
                 #building
                 Shape{
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
-                                86 0 -2,
-                                117 0 -2,
-                                117 22 -2,
-                                86 22 -2,
-                                86 0 -20,
-                                117 0 -20,
-                                117 22 -20,
-                                86 22 -20
+                                0 0 -2,
+                                31 0 -2,
+                                31 22 -2,
+                                0 22 -2,
+                                0 0 -20,
+                                31 0 -20,
+                                31 22 -20,
+                                0 22 -20
                             ]
                         }
                         coordIndex [
@@ -204,10 +139,10 @@ Transform {
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
-                                86 22 -2,
-                                117 22 -2,
-                                117 32 -20,
-                                86 32 -20
+                                0 22 -2,
+                                31 22 -2,
+                                31 32 -20,
+                                0 32 -20
                             ]
                         }
                         coordIndex [
@@ -234,12 +169,12 @@ Transform {
                             geometry IndexedFaceSet{
                                 coord Coordinate {
                                     point[
-                                        117 32 -20,
-                                        86 32 -20,
-                                        86 32 -40,
-                                        117 32 -40,
-                                        117 0 -40,
-                                        86 0 -40
+                                        31 32 -20,
+                                        0 32 -20,
+                                        0 32 -40,
+                                        31 32 -40,
+                                        31 0 -40,
+                                        0 0 -40
                                     ]
                                 }
                                 coordIndex [
@@ -266,103 +201,13 @@ Transform {
         }
         #conections to front entry left
         Transform{
+            translation 66 0 0
             children[
-                #building
-                Shape{
-                    geometry IndexedFaceSet{
-                        coord Coordinate {
-                            point[
-                                20 0 -2,
-                                51 0 -2,
-                                51 22 -2,
-                                20 22 -2,
-                            ]
-                        }
-                        coordIndex [
-                            0 1 2 3 -1, #Front
-                        ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
-                            ]
-                        }
-                    }
-                }
-                #roof
-                Shape{
-                    geometry IndexedFaceSet{
-                        coord Coordinate {
-                            point[
-                                20 22 -2,
-                                51 22 -2,
-                                51 32 -20,
-                                20 32 -20
-                            ]
-                        }
-                        coordIndex [
-                            0 1 2 3 -1, #roof
-                        ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
-                            ]
-                        }
-                    }
-                }
-                                #back part
-                Transform{
-                    children[
-                        Shape{
-                            geometry IndexedFaceSet{
-                                coord Coordinate {
-                                    point[
-                                        51 32 -20,
-                                        20 32 -20,
-                                        20 32 -40,
-                                        51 32 -40,
-                                        51 0 -40,
-                                        20 0 -40
-                                    ]
-                                }
-                                coordIndex [
-                                    3 2 1 0 -1, #roof
-                                    3 4 5 2 -1  #back
-                                ]
-                                color Color {
-                                    color [
-                                        .5 .5 .5,
-                                        0 0 1,
-                                        0 1 0,
-                                        0 1 1,
-                                        1 0 0,
-                                        1 0 1,
-                                        1 1 0,
-                                        1 1 1
-                                    ]
-                                }
-                            }
-                        }
-                    ]
-                }
+                USE Connnection
             ]
         }
         #front entry
         Transform {
-            #translation -18 0 -40
             children[
                 Shape{
                     geometry IndexedFaceSet{
