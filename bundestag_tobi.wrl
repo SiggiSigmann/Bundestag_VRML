@@ -1,5 +1,4 @@
 #VRML V2.0 utf8
-	
 Viewpoint {
     position 50 200 300
     orientation -1 0 0 0.5
@@ -21,6 +20,11 @@ Transform {
             translation 0 0 -2
             children[
                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
@@ -40,30 +44,39 @@ Transform {
                             0 3 4 7 -1, #left
                             4 5 6 7  #back
                         ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
                             ]
                         }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F1
+                            1 2 3 0 -1, #textur F2
+                            2 3 0 1 -1  #textur F3
+                        ]
                     }
                 }
                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "turmseite.jpg"
+                        }
+                    }
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
                                 0 32 0,
                                 20 32 0,
-                                20 38 0,
-                                0 38 0,
-                                0 38 -20,
-                                20 38 -20,
+                                20 48 0,
+                                0 48 0,
+                                0 48 -20,
+                                20 48 -20,
                                 20 32 -20,
                                 0 32 -20
                             ]
@@ -73,20 +86,56 @@ Transform {
                             1 6 5 2 -1, #right
                             0 3 4 7 -1, #left
                             4 5 6 7 -1, #back
-                            2 5 4 3 #top
                         ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
                             ]
                         }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F1
+                            1 2 3 0 -1, #textur F2
+                            2 3 0 1 -1, #textur F3
+                        ]
+                    }
+                }
+                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "turmdach.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet{
+                        coord Coordinate {
+                            point[
+                                20 48 0,
+                                0 48 0,
+                                0 48 -20,
+                                20 48 -20
+                            ]
+                        }
+                        coordIndex [
+                            0 3 2 1 #top
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
                     }
                 }
             ]
@@ -104,6 +153,11 @@ Transform {
             children[
                 #building
                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
@@ -120,22 +174,28 @@ Transform {
                         coordIndex [
                             0 1 2 3 -1, #Front
                         ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
                             ]
                         }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
                     }
                 }
                 #roof
                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
@@ -148,24 +208,30 @@ Transform {
                         coordIndex [
                             0 1 2 3 -1, #roof
                         ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
                             ]
                         }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
                     }
                 }
                 #back part
                 Transform{
                     children[
                         Shape{
+                            appearance Appearance {
+                                texture ImageTexture {
+                                    url "roof.jpg"
+                                }
+                            }
                             geometry IndexedFaceSet{
                                 coord Coordinate {
                                     point[
@@ -179,20 +245,60 @@ Transform {
                                 }
                                 coordIndex [
                                     3 2 1 0 -1, #roof
-                                    3 4 5 2 -1  #back
                                 ]
-                                color Color {
-                                    color [
-                                        .5 .5 .5,
-                                        0 0 1,
-                                        0 1 0,
-                                        0 1 1,
-                                        1 0 0,
-                                        1 0 1,
-                                        1 1 0,
-                                        1 1 1
+                                texCoord TextureCoordinate { 
+                                    point [
+                                        #x y
+                                        0 0,  
+                                        1 0, 
+                                        1 1,  
+                                        0 1 #punkte im bild definieren
                                     ]
                                 }
+                                texCoordIndex [ 
+                                    #punkt index
+                                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                                ]
+                            }
+                        }
+                    ]
+                }
+                #back part
+                Transform{
+                    children[
+                        Shape{
+                            appearance Appearance {
+                                texture ImageTexture {
+                                    url "Reichstag.jpg"
+                                }
+                            }
+                            geometry IndexedFaceSet{
+                                coord Coordinate {
+                                    point[
+                                        31 32 -20,
+                                        0 32 -20,
+                                        0 32 -40,
+                                        31 32 -40,
+                                        31 0 -40,
+                                        0 0 -40
+                                    ]
+                                }
+                                coordIndex [
+                                    3 4 5 2 -1  #back
+                                ]
+                                texCoord TextureCoordinate { 
+                                    point [
+                                        #x y
+                                        0 0,  
+                                        1 0, 
+                                        1 1,  
+                                        0 1 #punkte im bild definieren
+                                    ]
+                                }
+                                texCoordIndex [ 
+                                    #punkt index
+                                    3 0 1 2 -1, #textur F0 anordnumng der punkte anhand den ecken
+                                ]
                             }
                         }
                     ]
@@ -210,6 +316,11 @@ Transform {
         Transform {
             children[
                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
@@ -225,32 +336,79 @@ Transform {
                         }
                         coordIndex [
                             0 1 2 3 -1, #Front
-                            3 2 6 7 -1, #roof
                             1 5 6 2 -1, #right
                             0 3 7 4 -1, #left
                         ]
-                        color Color {
-                            color [
-                                .5 .5 .5,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
                             ]
                         }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            3 1 2 0 -1, #textur F1
+                            2 3 0 1 -1, #textur F2
+                            3 2 0 1 -1, #textur F3
+                            0 1 3 2 -1, #textur F4
+                            1 0 2 3 -1  #textur F5
+                        ]
+                    }
+                }
+                Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet{
+                        coord Coordinate {
+                            point[
+                                51 0 -2,
+                                86 0 -2,
+                                86 32 -2,
+                                51 32 -2,
+                                51 0 -40,
+                                86 0 -40,
+                                86 32 -40,
+                                51 32 -40
+                            ]
+                        }
+                        coordIndex [
+                            3 2 6 7 -1, #roof
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
                     }
                 }
                 #canopy
                 Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "frontdeko.jpg"
+                        }
+                    }
                     geometry IndexedFaceSet{
                         coord Coordinate {
                             point[
-                                51 22 0,
-                                86 22 0,
-                                70.5 32 0
+                                51 22 2,
+                                86 22 2,
+                                70.5 32 2,
                                 51 22 -2,
                                 86 22 -2,
                                 70.5 32 -2
@@ -262,33 +420,33 @@ Transform {
                             1 4 5 2 -1, #roof right
                             0 3 4 1 -1	#bottom
                         ]
-                        color Color {
-                            color [
-                                1 0 0,
-                                1 0 1,
-                                1 1 0,
-                                1 1 1
-                                0 0 0,
-                                0 0 1,
-                                0 1 0,
-                                0 1 1,
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                0.5 1, 
                             ]
                         }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
                     }
                 }
                 #pillar
                 Transform{
-                    translation 53.5 11 -0.5
+                    translation 53.5 11 0.5
                     children[
                         DEF saeule Shape{
-                            appearance Appearance{
-                                material Material { 
-                                    diffuseColor 0.96 0.9 0.0
+                            appearance Appearance {
+                                texture ImageTexture {
+                                    url "saeule.jpg"
                                 }
                             }
                             geometry Cylinder {
                                 height 22
-                                radius 0.5
+                                radius 1.5
                                 side TRUE
                                 top FALSE
                                 bottom FALSE
@@ -297,31 +455,31 @@ Transform {
                     ]
                 }
                 Transform{
-                    translation 59.5 11 -0.5
+                    translation 59.5 11 0.5
                     children[
                         USE saeule 
                     ]
                 }
                 Transform{
-                    translation 65.5 11 -0.5
+                    translation 65.5 11 0.5
                     children[
                         USE saeule 
                     ]
                 }
                 Transform{
-                    translation 71.5 11 -0.5
+                    translation 71.5 11 0.5
                     children[
                         USE saeule 
                     ]
                 }
                 Transform{
-                    translation 77.5 11 -0.5
+                    translation 77.5 11 0.5
                     children[
                         USE saeule 
                     ]
                 }
                 Transform{
-                    translation 83.5 11 -0.5
+                    translation 83.5 11 0.5
                     children[
                         USE saeule 
                     ]
@@ -330,3 +488,920 @@ Transform {
         }
     ]
 }
+#Tor
+Transform {
+    translation 84 0 -120
+    rotation 0 1 0 3.14
+    children[
+        #Tor GrundForm
+        Transform {
+            translation 0  0 0
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #vorderes 4 eck
+                                0.0  20.0 0.0,   #0
+                                31.0  20.0 0.0,   #1
+                                31.0 32.0 0.0,   #2
+                                0.0 32.0 0.0,   #3
+                                #oben hinten links und rechts
+                                0.0 32.0 -42.0 #4
+                                31.0 32.0 -42.0 #5
+                                #unten hinten links und rechts
+                                0.0 0.0 -42.0 #6
+                                31.0 0.0 -42.0 #7
+                                #vorne unterseite:
+                                0.0  20.0 -8,   #8
+                                31.0  20.0 -8,   #9
+                                #vorne unten  
+                                0.0  0.0 -8,   #10
+                                31.0  0.0 -8,   #11  
+                                #hinten mitte
+                                0.0  20.0 -42.0,   #12
+                                31.0  20.0 -42.0,   #13
+                            ]
+                        }
+                        coordIndex [
+                            #Vorne
+                            0 1 2 3 -1
+                            #rückseite
+                            7 6 4 5 -1
+                            #unterseite vorne
+                            1 0 8 9 -1
+                            #vorderseite hinten
+                            9 8 10 11 -1
+                            #2 1 9 11 7 5 -1
+                            #rechts:
+                            2 1 13 5 -1
+                            9 11 7 13 -1
+                            #links 
+                            3 4 12 0 -1
+                            8 12 6 10 -1
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            3 2 2 1 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            3 2 2 1 -1, #textur F1
+                            3 2 2 1 -1, #textur F2
+                            0 0 0 0 -1, #textur F3
+                            0 0 0 0 -1, #textur F4
+                            0 0 0 0 -1  #textur F5
+                        ]
+                    }
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #vorderes 4 eck
+                                0.0  20.0 0.0,   #0
+                                31.0  20.0 0.0,   #1
+                                31.0 32.0 0.0,   #2
+                                0.0 32.0 0.0,   #3
+                                #oben hinten links und rechts
+                                0.0 32.0 -42.0 #4
+                                31.0 32.0 -42.0 #5
+                                #unten hinten links und rechts
+                                0.0 0.0 -42.0 #6
+                                31.0 0.0 -42.0 #7
+                                #vorne unterseite:
+                                0.0  20.0 -8,   #8
+                                31.0  20.0 -8,   #9
+                                #vorne unten  
+                                0.0  0.0 -8,   #10
+                                31.0  0.0 -8,   #11  
+                                #hinten mitte
+                                0.0  20.0 -42.0,   #12
+                                31.0  20.0 -42.0,   #13
+                            ]
+                        }
+                        coordIndex [
+                            #deckel
+                            3 2 5 4 -1
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
+                    }
+                }
+            ]
+        }
+        #Achtung jetzt kommen Saulen
+        Transform{
+            translation 2 10 -2
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "saeule.jpg"
+                        }
+                    }
+                    geometry DEF BackS Box {
+                        size 4 20 4
+                    } 
+                }
+            ]
+        }
+        Transform{
+            translation 29 10 -2
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "saeule.jpg"
+                        }
+                    }
+                    geometry USE BackS
+                }
+            ]
+        }
+        Transform{
+            translation 10.5 10 -2
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "saeule.jpg"
+                        }
+                    }
+                    geometry USE BackS
+                }
+            ]
+        }
+        Transform{
+            translation 19.5 10 -2
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "saeule.jpg"
+                        }
+                    }
+                    geometry USE BackS
+                }
+            ]
+        }
+    ]
+}
+#Mauer
+Transform{
+    rotation 0 -1 0 1.57
+    translation 0 0 -70
+    children[
+        #Turm
+        Transform{
+            translation 0 0 0
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #vorne
+                                0 0 0#0
+                                20 0 0#1
+                                20 32 0#2
+                                0 32 0#3
+                                #hinten
+                                0 0 -20#4
+                                20 0 -20#5
+                                20 32 -20#6
+                                0 32 -20#7
+                                # hinten gipfel
+                                10 38 -20#8
+
+                            ]
+                        }
+                        coordIndex [
+                            #vorne
+                            0 1 2 3 -1
+                            #hinten
+                            5 4 7 6 -1
+                            #rechts
+                            1  5 6 2 -1
+                            #links
+                            4 0 3 7 -1
+                            
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F1
+                            2 3 0 1 -1, #textur F2
+                            3 2 0 1 -1, #textur F3
+                        ]
+                    }
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #vorne
+                                0 0 0#0
+                                20 0 0#1
+                                20 32 0#2
+                                0 32 0#3
+                                #hinten
+                                0 0 -20#4
+                                20 0 -20#5
+                                20 32 -20#6
+                                0 32 -20#7
+                                # hinten gipfel
+                                10 38 -20#8
+
+                            ]
+                        }
+                        coordIndex [
+                            #dreieck
+                            3 2 8 -1
+                            #dreieck rechts
+                            3 8 7 -1
+                            #dreick links
+                            8 2 6 -1
+                            #dreieck hinten
+                            8 6 7 -1
+                            
+                        ] 
+                    }
+                }
+            ]
+        }
+        #mauer Rechts
+        Transform{
+            translation 20 0 -1
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry DEF IFMauerLinks IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #front
+                                0 0 0 #0
+                                28 0 0 #1
+                                28 22 0  #2
+                                0 22 0 #3
+                                #back
+                                0 0 -19 #4
+                                28 0 -19 #5
+                                28 32 -19  #6
+                                0 32 -19 #7
+
+
+                                
+                            ]
+                        }
+                        coordIndex [
+                            #vorne
+                            0 1 2 3 -1
+                            #hinten
+                            5 4 7 6 -1
+                            #rechts
+                            1  5 6 2 -1
+                            #links
+                            4 0 3 7 -1
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1,
+                            0 1 2 3 -1
+                        ]
+                    }
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry DEF IFMauerLinksDach IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #front
+                                0 0 0 #0
+                                28 0 0 #1
+                                28 22 0  #2
+                                0 22 0 #3
+                                #back
+                                0 0 -19 #4
+                                28 0 -19 #5
+                                28 32 -19  #6
+                                0 32 -19 #7
+
+
+                                
+                            ]
+                        }
+                        coordIndex [
+                            #deckel
+                            3 2 6 7 -1
+                        ] 
+                    }
+                }
+            ]
+        }
+        #mauer Links
+        Transform{
+            translation -26 0 -1
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry USE IFMauerLinks
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry USE IFMauerLinksDach
+                }
+            ]
+        }
+    ]
+}
+#Mauer
+Transform{
+    rotation 0 1 0 1.57
+    translation 137 0 -48
+    children[
+        #Turm
+        Transform{
+            translation 0 0 0
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #vorne
+                                0 0 0#0
+                                20 0 0#1
+                                20 32 0#2
+                                0 32 0#3
+                                #hinten
+                                0 0 -20#4
+                                20 0 -20#5
+                                20 32 -20#6
+                                0 32 -20#7
+                                # hinten gipfel
+                                10 38 -20#8
+
+                            ]
+                        }
+                        coordIndex [
+                            #vorne
+                            0 1 2 3 -1
+                            #hinten
+                            5 4 7 6 -1
+                            #rechts
+                            1  5 6 2 -1
+                            #links
+                            4 0 3 7 -1
+                            
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F1
+                            0 1 2 3 -1, #textur F2
+                            0 1 2 3 -1, #textur F3
+                        ]
+                    }
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #vorne
+                                0 0 0#0
+                                20 0 0#1
+                                20 32 0#2
+                                0 32 0#3
+                                #hinten
+                                0 0 -20#4
+                                20 0 -20#5
+                                20 32 -20#6
+                                0 32 -20#7
+                                # hinten gipfel
+                                10 38 -20#8
+
+                            ]
+                        }
+                        coordIndex [
+                            #dreieck
+                            3 2 8 -1
+                            #dreieck rechts
+                            3 8 7 -1
+                            #dreick links
+                            8 2 6 -1
+                            #dreieck hinten
+                            8 6 7 -1
+                            
+                        ] 
+                    }
+                }
+            ]
+        }
+        #mauer Rechts
+        Transform{
+            translation 20 0 -1
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry DEF IFMauerLinks IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #front
+                                0 0 0 #0
+                                28 0 0 #1
+                                28 22 0  #2
+                                0 22 0 #3
+                                #back
+                                0 0 -19 #4
+                                28 0 -19 #5
+                                28 32 -19  #6
+                                0 32 -19 #7
+
+
+                                
+                            ]
+                        }
+                        coordIndex [
+                            #vorne
+                            0 1 2 3 -1
+                            #hinten
+                            5 4 7 6 -1
+                            #rechts
+                            1  5 6 2 -1
+                            #links
+                            4 0 3 7 -1
+                        ]
+                         texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+
+                        ]
+                    }
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry DEF IFMauerLinksDach IndexedFaceSet {
+                        coord Coordinate {
+                            point [
+                                #front
+                                0 0 0 #0
+                                28 0 0 #1
+                                28 22 0  #2
+                                0 22 0 #3
+                                #back
+                                0 0 -19 #4
+                                28 0 -19 #5
+                                28 32 -19  #6
+                                0 32 -19 #7
+
+
+                                
+                            ]
+                        }
+                        coordIndex [
+                            #deckel
+                            3 2 6 7 -1
+                        ]
+
+                    }
+                }
+
+            ]
+        }
+        #mauer Links
+        Transform{
+            translation -26 0 -1
+            children [
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry USE IFMauerLinks
+                }
+                Shape {
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry USE IFMauerLinksDach
+                }
+            ]
+        }
+    ]
+}
+
+Transform{
+    translation 117 0 -94
+    children[
+        USE Tower
+    ]
+}
+Transform{
+    translation 0 0 -94
+    children[
+        USE Tower
+    ]
+}
+
+Transform {
+    translation 73 0 -118
+    rotation 0 1 0 3.14
+    children [
+       DEF longconnector Transform{
+            translation 20 0 0
+            children[
+                #building
+                Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "Reichstag.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet{
+                        coord Coordinate {
+                            point[
+                                0 0 -2,
+                                33 0 -2,
+                                33 22 -2,
+                                0 22 -2,
+                                0 0 -20,
+                                33 0 -20,
+                                33 22 -20,
+                                0 22 -20
+                            ]
+                        }
+                        coordIndex [
+                            0 1 2 3 -1, #Front
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
+                    }
+                }
+                #roof
+                Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "roof.jpg"
+                        }
+                    }
+                    geometry IndexedFaceSet{
+                        coord Coordinate {
+                            point[
+                                0 22 -2,
+                                33 22 -2,
+                                33 32 -20,
+                                0 32 -20
+                            ]
+                        }
+                        coordIndex [
+                            0 1 2 3 -1, #roof
+                        ]
+                        texCoord TextureCoordinate { 
+                            point [
+                                #x y
+                                0 0,  
+                                1 0, 
+                                1 1,  
+                                0 1 #punkte im bild definieren
+                            ]
+                        }
+                        texCoordIndex [ 
+                            #punkt index
+                            0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                        ]
+                    }
+                }
+                #back part
+                Transform{
+                    children[
+                        Shape{
+                            appearance Appearance {
+                                texture ImageTexture {
+                                    url "roof.jpg"
+                                }
+                            }
+                            geometry IndexedFaceSet{
+                                coord Coordinate {
+                                    point[
+                                        33 32 -20,
+                                        0 32 -20,
+                                        0 32 -40,
+                                        33 32 -40,
+                                        33 0 -40,
+                                        0 0 -40
+                                    ]
+                                }
+                                coordIndex [
+                                    3 2 1 0 -1, #roof
+                                ]
+                                texCoord TextureCoordinate { 
+                                    point [
+                                        #x y
+                                        0 0,  
+                                        1 0, 
+                                        1 1,  
+                                        0 1 #punkte im bild definieren
+                                    ]
+                                }
+                                texCoordIndex [ 
+                                    #punkt index
+                                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                                ]
+                            }
+                        }
+                        Shape{
+                            appearance Appearance {
+                                texture ImageTexture {
+                                    url "Reichstag.jpg"
+                                }
+                            }
+                            geometry IndexedFaceSet{
+                                coord Coordinate {
+                                    point[
+                                        33 32 -20,
+                                        0 32 -20,
+                                        0 32 -40,
+                                        33 32 -40,
+                                        33 0 -40,
+                                        0 0 -40
+                                    ]
+                                }
+                                coordIndex [
+                                    3 4 5 2 -1  #back
+                                ]
+                                texCoord TextureCoordinate { 
+                                    point [
+                                        #x y
+                                        0 0,  
+                                        1 0, 
+                                        1 1,  
+                                        0 1 #punkte im bild definieren
+                                    ]
+                                }
+                                texCoordIndex [ 
+                                    #punkt index
+                                    3 0 1 2 -1, #textur F0 anordnumng der punkte anhand den ecken
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+Transform {
+    translation 137 0 -118
+    rotation 0 1 0 3.14
+    children [
+        USE longconnector
+    ]
+}
+
+Transform{
+    translation 41 0 -40
+    children [
+        Shape {
+           appearance Appearance {
+                texture ImageTexture {
+                    url "Reichstag.jpg"
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        #front
+                        0 0 0 #0
+                        55 0 0 #1
+                        55 32 0  #2
+                        0 32 0 #3
+                        #back
+                        0 0 -38 #4
+                        55 0 -38 #5
+                        55 32 -38  #6
+                        0 32 -38 #7
+
+
+                        
+                    ]
+                }
+                coordIndex [
+                    #vorne
+                    0 1 2 3 -1
+                    #hinten
+                    5 4 7 6 -1
+                    #rechts
+                    1  5 6 2 -1
+                    #links
+                    4 0 3 7 -1
+                ] 
+                texCoord TextureCoordinate { 
+                    point [
+                        #x y
+                        0 0,  
+                        1 0, 
+                        1 1,  
+                        0 1 #punkte im bild definieren
+                    ]
+                }
+                texCoordIndex [ 
+                    #punkt index
+                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                ]
+            }
+        }
+        Shape {
+            appearance Appearance {
+                texture ImageTexture {
+                    url "kuppel.jpeg"
+                }
+            }
+            geometry IndexedFaceSet {
+                coord Coordinate {
+                    point [
+                        #front
+                        0 0 0 #0
+                        55 0 0 #1
+                        55 32 0  #2
+                        0 32 0 #3
+                        #back
+                        0 0 -38 #4
+                        55 0 -38 #5
+                        55 32 -38  #6
+                        0 32 -38 #7
+
+
+                        
+                    ]
+                }
+                coordIndex [
+                    #deckel
+                    3 2 6 7 -1
+                ]
+                texCoord TextureCoordinate { 
+                    point [
+                        #x y
+                        0 0,  
+                        1 0, 
+                        1 1,  
+                        0 1 #punkte im bild definieren
+                    ]
+                }
+                texCoordIndex [ 
+                    #punkt index
+                    0 1 2 3 -1, #textur F0 anordnumng der punkte anhand den ecken
+                ]
+            }
+        }
+        Transform {
+            translation 28 32 -20
+            rotation 1 1 1 1.57
+            children [
+                Shape{
+                    appearance Appearance {
+                        texture ImageTexture {
+                            url "sphere.png"
+                        }
+                    }
+                    geometry Sphere {
+                        radius 20
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+
+
+
+
