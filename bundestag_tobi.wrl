@@ -1384,12 +1384,11 @@ Transform{
         }
         Transform {
             translation 28 32 -20
-            rotation 1 1 1 1.57
             children [
                 Shape{
                     appearance Appearance {
                         texture ImageTexture {
-                            url "sphere.png"
+                            url "kuppel.png"
                         }
                     }
                     geometry Sphere {
